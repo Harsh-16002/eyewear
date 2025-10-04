@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 223 84% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 223 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 84% 5%;
+
+    --primary: 223 84% 5%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 223 84% 5%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 43 74% 66%;
+    --accent-foreground: 223 84% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 91%;
+    --input: 220 20% 91%;
+    --ring: 223 84% 5%;
+
+    /* Eyewear brand colors */
+    --brand-navy: 223 84% 5%;
+    --brand-gold: 43 74% 66%;
+    --brand-gold-light: 43 74% 76%;
+    --brand-gray-light: 220 20% 96%;
+    --brand-gray: 220 9% 46%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-navy)), hsl(223 60% 15%));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--brand-gray-light)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-gold-light)));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--brand-navy) / 0.3);
+    --shadow-card: 0 4px 20px -8px hsl(var(--brand-navy) / 0.15);
+    --shadow-gold: 0 4px 20px -8px hsl(var(--brand-gold) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 223 84% 5%;
+    --foreground: 0 0% 100%;
+
+    --card: 223 60% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 223 60% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 43 74% 66%;
+    --primary-foreground: 223 84% 5%;
+
+    --secondary: 223 30% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 223 30% 15%;
+    --muted-foreground: 220 20% 65%;
+
+    --accent: 43 74% 66%;
+    --accent-foreground: 223 84% 5%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 223 30% 15%;
+    --input: 223 30% 15%;
+    --ring: 43 74% 66%;
+
+    /* Dark mode brand colors */
+    --brand-navy: 223 84% 5%;
+    --brand-gold: 43 74% 66%;
+    --brand-gold-light: 43 74% 76%;
+    --brand-gray-light: 223 30% 15%;
+    --brand-gray: 220 20% 65%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(223 84% 5%), hsl(223 60% 12%));
+    --gradient-card: linear-gradient(180deg, hsl(223 60% 8%), hsl(223 30% 15%));
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
